@@ -27,7 +27,7 @@ STORAGE='http://cortx-storage.colo.seagate.com'
 
 cat <<EOF > /etc/yum.repos.d/motr_last_successful.repo
 [motr-dev]
-baseurl=$STORAGE/releases/cortx/github/main/centos-7.9.2009/last_successful/
+baseurl=$STORAGE/releases/cortx/github/main/rockylinux-8.4/last_successful/
 gpgcheck=0
 name=motr-dev
 enabled=1
@@ -35,17 +35,9 @@ EOF
 
 cat <<EOF > /etc/yum.repos.d/motr_uploads.repo
 [motr-uploads]
-baseurl=$STORAGE/releases/cortx/third-party-deps/centos/centos-7.9.2009-2.0.0-k8/motr_uploads/
+baseurl=$STORAGE/releases/cortx/third-party-deps/rockylinux/rockylinux-8.4-2.0.0-k8/motr/
 gpgcheck=0
 name=motr-uploads
-enabled=1
-EOF
-
-cat <<EOF > /etc/yum.repos.d/lustre_release.repo
-[lustre]
-baseurl=$STORAGE/releases/cortx/third-party-deps/centos/centos-7.9.2009-2.0.0-k8/lustre/custom/tcp/
-gpgcheck=0
-name=lustre
 enabled=1
 EOF
 
