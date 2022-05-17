@@ -35,7 +35,7 @@ EOF
 
 cat <<EOF > /etc/yum.repos.d/motr_uploads.repo
 [motr-uploads]
-baseurl=$STORAGE/releases/cortx/third-party-deps/rockylinux/rockylinux-8.4-2.0.0-k8/motr/
+baseurl=$STORAGE/releases/cortx/github/main/rockylinux-8.4/last_successful_prod/3rd_party/motr/
 gpgcheck=0
 name=motr-uploads
 enabled=1
