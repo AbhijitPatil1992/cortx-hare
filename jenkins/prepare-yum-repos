@@ -25,6 +25,14 @@ export
 
 STORAGE='http://cortx-storage.colo.seagate.com'
 
+cat <<EOF > /etc/yum.repos.d/last_successful_prod_cortx_iso.repo
+[last_successful_prod_cortx_iso]
+baseurl=$STORAGE/releases/cortx/github/main/rockylinux-8.4/last_successful_prod/cortx_iso/
+gpgcheck=0
+name=motr-dev
+enabled=1
+EOF
+
 cat <<EOF > /etc/yum.repos.d/motr_last_successful.repo
 [motr-dev]
 baseurl=$STORAGE/releases/cortx/github/main/rockylinux-8.4/last_successful/
