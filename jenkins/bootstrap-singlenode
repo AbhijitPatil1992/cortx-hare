@@ -29,7 +29,7 @@ mkdir -p /var/motr
 echo 'options lnet networks=tcp(eth1) config_on_load=1' \
      > /etc/modprobe.d/lnet.conf
 
-for i in {lsblk |grep disk|awk '{print $1}'|sed -e "s/\r//g"}; do
+for i in ${lsblk |grep disk|awk '{print $1}'|sed -e "s/\r//g"}; do
     dd if=/dev/zero of=/var/motr/$i.img bs=1M seek=9999 count=1
     losetup /dev/$i /var/motr/$i.img
 done
